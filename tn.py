@@ -1,11 +1,11 @@
-from gensim.models import word2vec
-import logging
-# 主程序
-logging.basicConfig(format='%(asctime)s:%(levelname)s: %(message)s', level=logging.INFO)
-# sentences = word2vec.Text8Corpus(u'e:/Downloads/testch.txt')  # 加载语料
-# model = word2vec.Word2Vec(sentences, size=200)  # 训练skip-gram模型，默认window=5
-model=word2vec.Word2Vec.load('e:/Downloads/y')
-print(model)
+# from gensim.models import word2vec
+# import logging
+# # 主程序
+# logging.basicConfig(format='%(asctime)s:%(levelname)s: %(message)s', level=logging.INFO)
+# # sentences = word2vec.Text8Corpus(u'e:/Downloads/testch.txt')  # 加载语料
+# # model = word2vec.Word2Vec(sentences, size=200)  # 训练skip-gram模型，默认window=5
+# model=word2vec.Word2Vec.load('e:/Downloads/y')
+# print(model)
 # # 计算两个词的相似度/相关程度
 # try:
 #     y1 = model.similarity(u"coffee", u"soap")
@@ -40,3 +40,22 @@ print(model)
 # # model.save_word2vec_format(u"书评.model.bin", binary=True)
 # # 对应的加载方式
 # # model_3 =word2v
+
+# from  keras.preprocessing import text
+# from  keras.preprocessing.text import Tokenizer
+# text1 = "are you ok? if you're ok, try good"
+# b = text.text_to_word_sequence(text1,filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~\t\n',lower=True,split=" ")
+# print(b)
+# c = text.one_hot(text1,200,filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~\t\n',lower=True,split=" ")
+# print(c)
+# tokenizer = Tokenizer(num_words=100,filters='!"#$%&()*+,-./:;<=>?@[\]^_`{|}~\t\n',lower=True,split=" ",char_level=False)
+# tokenizer.fit_on_texts(text1)
+# print(tokenizer.word_counts)
+# print(tokenizer.word_index)
+# print(tokenizer.word_docs)
+# print(tokenizer.document_count)
+# print(tokenizer.texts_to_matrix(text1))
+# print(tokenizer.texts_to_sequences(text1))
+
+
+print (u'\u8fd0\u52a8\u573a\u4e0a\u6709\u4e00\u4e2a\u53f3\u624b\u62ff\u7740\u7403\u62cd\u7684\u5973\u4eba\u5728\u6253\u7f51\u7403", "\u5bbd\u655e\u7684\u7403\u573a\u4e0a\u6709\u4e00\u4e2a\u53f3\u624b\u62ff\u7740\u7403\u62cd\u7684\u8fd0\u52a8\u5458\u5728\u6253\u7f51\u7403", "\u4e00\u4e2a\u6234\u7740\u5e3d\u5b50\u7684\u5973\u4eba\u5728\u8fd0\u52a8\u573a\u4e0a\u6253\u7f51\u7403", "\u4e00\u4e2a\u53f3\u624b\u62ff\u7740\u7403\u62cd\u7684\u5973\u4eba\u5728\u5e72\u51c0\u7684\u8fd0\u52a8\u573a\u4e0a\u6253\u7f51\u7403", "\u5e73\u5766\u7684\u7403\u573a\u4e0a\u6709\u4e00\u4f4d\u53f3\u624b\u62ff\u7740\u7403\u62cd\u7684\u5973\u58eb\u5728\u6253\u7f51\u7403')
